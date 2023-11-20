@@ -1,1 +1,9 @@
-<p>users works!</p>
+
+<div>
+    <h2>Seleziona un Utente</h2>
+    <label for="bankDropdown">Scegli Un Utente:</label>
+    <select id="bankDropdown" >
+      <option *ngFor="let user of users" [value]="user.id">{{ user.nomeUtente }}</option>
+    </select>
+  </div>
+  

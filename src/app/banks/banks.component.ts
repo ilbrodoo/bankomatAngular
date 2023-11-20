@@ -17,9 +17,7 @@ export class BanksComponent {
       this.banks = banks;
     });
   }
-
-  selectBank(event: any) {
-    const selectedBankId = event.target.value;
-    this.selectedBank = this.banks.find((bank) => bank.id === selectedBankId);
+  ngOnInit() :void{
+    this.getAllBanks();
   }
 }

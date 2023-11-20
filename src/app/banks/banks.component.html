@@ -1,16 +1,9 @@
+
 <div>
     <h2>Seleziona una banca</h2>
     <label for="bankDropdown">Scegli una banca:</label>
-    <select id="bankDropdown" (change)="selectBank($event)">
-      <option *ngFor="let bank of banks" [value]="bank.id">{{ bank.name }}</option>
+    <select id="bankDropdown" >
+      <option *ngFor="let bank of banks" [value]="bank.id">{{ bank.nome }}</option>
     </select>
-  
-    <button (click)="getAllBanks()">Carica tutte le banche</button>
-  
-    <div *ngIf="selectedBank">
-      <h3>Dettagli della banca selezionata:</h3>
-      <p>Nome: {{ selectedBank.name }}</p>
-      <!-- Aggiungi altri dettagli se necessario -->
-    </div>
   </div>
   

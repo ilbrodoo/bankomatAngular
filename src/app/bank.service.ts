@@ -8,13 +8,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class BankService {
 
-  private countriesUrl: string = 'https://localhost:7009/';
+  private countriesUrl: string = 'https://localhost:7009/api/Banche';
 
   constructor(private http: HttpClient) { }
 
   getAllBanks(): Observable<Bank[]>{
-    return this.http.get<Bank[]>(`${this.countriesUrl}api/Banche`);
+    return this.http.get<Bank[]>(`${this.countriesUrl}`);
   }
-
-
 }
