@@ -1,9 +1,32 @@
+<div class="bank-list-container">
+  <h2>Elenco Utenti</h2>
 
-<div>
-    <h2>Seleziona un Utente</h2>
-    <label for="bankDropdown">Scegli Un Utente:</label>
-    <select id="bankDropdown" >
-      <option *ngFor="let user of users" [value]="user.id">{{ user.nomeUtente }}</option>
-    </select>
-  </div>
-  
+  <table>
+    <thead>
+      <tr>
+        <th>username</th>
+        <th>password</th>
+        <th>Bloccato</th>
+        <th>Gestisci Bloccato</th>
+        <th>Elimina Utente</th>
+        <!-- Aggiungi altre colonne se necessario -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+
+        <td>{{ user.nomeUtente }}</td>
+        <td>{{ user.password }}</td>
+        <td>{{ user.bloccato }}</td>
+        <td>
+          <button (click)="bloccaSbloccaUtente(user)">Blocca/Sblocca Utente</button>
+        </td>
+        <td>
+          <button (click)=" eliminaUtente(user)">Elimina Utente</button> 
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <button>Aggiungi Utente</button>
+</div>

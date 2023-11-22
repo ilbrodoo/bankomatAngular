@@ -5,6 +5,7 @@ import { UsersComponent } from './users/users.component';
 const routes: Routes = [
   { path: '' , component: BanksComponent,}
   ,{path:'user', component:UsersComponent}
+  
 ];
 
 @NgModule({

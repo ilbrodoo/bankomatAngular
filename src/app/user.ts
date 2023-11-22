@@ -1,5 +1,7 @@
 export interface User {
-   idBanca:Number,
+    id:Number,
+    idBanca:Number,
     nomeUtente: String,
-    password: String
+    password: String,
+    bloccato:boolean,
 }

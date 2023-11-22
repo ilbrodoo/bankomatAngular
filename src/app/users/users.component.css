@@ -1,0 +1,47 @@
+.bank-list-container {
+    margin: 20px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera */
+    border-radius: 8px; /* Bordi arrotondati */
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  tr:hover {
+    background-color: #ecf0f1;
+  }
+  
+  button {
+    padding: 8px 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  

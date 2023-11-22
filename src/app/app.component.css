@@ -1,58 +1,33 @@
-/* banks.component.css */
+/* Reset dei margini e dei padding per il body */
+body {
+  margin: 0;
+  padding: 0;
 
-div {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    font-size: 24px;
-    color: #333;
-  }
-  
-  label {
-    display: block;
-    margin-top: 10px;
-    font-size: 16px;
-    color: #555;
-  }
-  
-  select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  div[role="listbox"] {
-    position: relative;
-  }
-  
-  div[role="listbox"]::before {
-    content: '\25BC';
-    font-size: 20px;
-    color: #555;
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-  }
-  
-  h3 {
-    margin-top: 20px;
-    font-size: 20px;
-    color: #333;
-  }
-  
-  p {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #555;
-  }
-  
+}
+
+/* Stile della navbar */
+.navbar {
+  background-color: #3498db; /* Blu chiaro */
+  overflow: hidden;
+}
+
+/* Stile dei link nella navbar */
+.nav-link {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Cambia il colore del link al passaggio del mouse */
+.nav-link:hover {
+  background-color: #2980b9; /* Blu scuro */
+}
+
+/* Stile generale del router-outlet */
+router-outlet {
+  padding: 20px;
+}

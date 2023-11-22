@@ -1,9 +1,24 @@
+<div class="bank-list-container">
+  <h2>Elenco Banche</h2>
 
-<div>
-    <h2>Seleziona una banca</h2>
-    <label for="bankDropdown">Scegli una banca:</label>
-    <select id="bankDropdown" >
-      <option *ngFor="let bank of banks" [value]="bank.id">{{ bank.nome }}</option>
-    </select>
-  </div>
-  
+  <table>
+    <thead>
+      <tr>
+        <th>Nome Banca</th>
+        <th>Funzionalità</th>
+        <th>Gestisci Utenti</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bank of banks">
+        <td>{{ bank.nome }}</td>
+        <td>{{ bank.funzionalita }}</td>
+        <td>
+          <!-- Aggiungi (click)="gestisciUtenti(bank.id) -->
+          <button >Gestisci Utenti</button> 
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>

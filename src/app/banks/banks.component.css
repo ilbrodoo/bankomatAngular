@@ -1,58 +1,47 @@
-/* banks.component.css */
-
-div {
-    max-width: 400px;
-    margin: 20px auto;
+.bank-list-container {
+    margin: 20px;
+    background: white;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera */
+    border-radius: 8px; /* Bordi arrotondati */
   }
   
   h2 {
-    font-size: 24px;
-    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
   }
   
-  label {
-    display: block;
-    margin-top: 10px;
-    font-size: 16px;
-    color: #555;
-  }
-  
-  select {
+  table {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  div[role="listbox"] {
-    position: relative;
-  }
-  
-  div[role="listbox"]::before {
-    content: '\25BC';
-    font-size: 20px;
-    color: #555;
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-  }
-  
-  h3 {
-    margin-top: 20px;
-    font-size: 20px;
-    color: #333;
-  }
-  
-  p {
+    border-collapse: collapse;
     margin-top: 10px;
-    font-size: 16px;
-    color: #555;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  tr:hover {
+    background-color: #ecf0f1;
+  }
+  
+  button {
+    padding: 8px 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
   }
   

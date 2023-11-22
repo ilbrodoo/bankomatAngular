@@ -6,12 +6,13 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { BanksComponent } from './banks/banks.component';
 import {  HttpClientModule } from '@angular/common/http';
+import { ModificaBloccoComponent } from './modifica-blocco/modifica-blocco.component';
 @NgModule({
   declarations: [
     AppComponent,
     BanksComponent,
     UsersComponent,
-
+    ModificaBloccoComponent,
   ],
   imports: [
     BrowserModule,
