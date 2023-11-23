@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -8,9 +9,8 @@ import { UserService } from '../user.service';
 })
 export class UsersComponent {
   users: any[] = [];
-  bloccato: boolean = false;
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private router: Router) {}
 
   getAllUsers() {
     this.userService.getAllUsers().subscribe((users) => {
@@ -20,30 +20,36 @@ export class UsersComponent {
 
   bloccaSbloccaUtente(user: any) {
     const clienteId = user.id;
-    console.log(user);
     const bloccato = !user.bloccato;
-  
-    this.userService.bloccaSbloccaUtente(clienteId, bloccato).subscribe(() => {
-      this.getAllUsers(); 
-    });
+    this.router.navigate(['/modifica-blocco', clienteId, bloccato]);
   }
+
+  modificaPassword(user:any){
+    const clienteId = user.id;
+    this.router.navigate(['/modifica-password',clienteId]); 
+  }
+  aggiungiUtente() {
+    this.router.navigate(['/aggiungi-utente']); 
+    }
+  
 
   eliminaUtente(user: any) {
     const clienteId = user.id;
-  
+
     const confermaEliminazione = window.confirm('Sei sicuro di voler eliminare questo utente?');
-  
+
     if (confermaEliminazione) {
       this.userService.eliminaUtente(clienteId).subscribe(
         () => {
           this.getAllUsers();
         },
-        
       );
-    } 
+    }
   }
-  
+
   ngOnInit(): void {
     this.getAllUsers();
   }
 }
+
+  

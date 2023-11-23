@@ -1,1 +1,19 @@
-<p>modifica-blocco works!</p>
+<!-- modifica-blocco.component.html -->
+
+<h2>Modifica Blocco Utente</h2>
+
+<p>Cliente ID: {{ clienteId }}</p>
+<p>Bloccato: {{ bloccato ? 'Sì' : 'No' }}</p>
+
+<!-- Il tuo form per la modifica del blocco -->
+<form>
+  <div class="form-group">
+    <label for="bloccatoCheckbox">Bloccato</label>
+    <input type="checkbox" id="bloccatoCheckbox" [(ngModel)]="bloccato" name="bloccato">
+  </div>
+  
+  <!-- Altri campi del tuo form, se necessario -->
+  
+  <button type="submit" class="btn btn-primary" (click)="salvaModifiche()">Salva Modifiche</button>
+
+</form>

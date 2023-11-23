@@ -1,0 +1,51 @@
+/* Stile per il contenitore principale */
+div {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  /* Stile per il form */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Stile per le etichette */
+  label {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  /* Stile per gli input e i select */
+  input, select {
+    padding: 8px;
+    margin-bottom: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Stile per i campi obbligatori non compilati */
+  input:required:invalid,
+  select:required:invalid {
+    border: 1px solid red;
+  }
+  
+  /* Stile per il pulsante */
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Stile per il pulsante disabilitato */
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

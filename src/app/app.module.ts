@@ -6,18 +6,24 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { BanksComponent } from './banks/banks.component';
 import {  HttpClientModule } from '@angular/common/http';
-import { ModificaBloccoComponent } from './modifica-blocco/modifica-blocco.component';
+ import { ModificaBloccoComponent } from './modifica-blocco/modifica-blocco.component';
+import { FormsModule } from '@angular/forms';
+import { AggiungiUserComponent } from './aggiungi-user/aggiungi-user.component';
+import { ModificaPasswordComponent } from './modifica-password/modifica-password.component'; 
 @NgModule({
   declarations: [
     AppComponent,
     BanksComponent,
     UsersComponent,
-    ModificaBloccoComponent,
+   ModificaBloccoComponent,
+   AggiungiUserComponent,
+   ModificaPasswordComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [BankService], // Aggiungi BankService ai fornitori
   bootstrap: [AppComponent]

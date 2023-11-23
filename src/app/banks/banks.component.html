@@ -12,13 +12,15 @@
     <tbody>
       <tr *ngFor="let bank of banks">
         <td>{{ bank.nome }}</td>
-        <td>{{ bank.funzionalita }}</td>
         <td>
-          <!-- Aggiungi (click)="gestisciUtenti(bank.id) -->
-          <button >Gestisci Utenti</button> 
+          <ul>
+            <li *ngFor="let funzione of bank.funzionalita">{{ funzione }}</li>
+          </ul>
+        </td>
+        <td>
+          <button>Gestisci Utenti</button>
         </td>
       </tr>
-      
     </tbody>
   </table>
 </div>

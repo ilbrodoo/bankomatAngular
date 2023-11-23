@@ -1,0 +1,20 @@
+<div>
+  <h2>Aggiungi Utente</h2>
+  <form (ngSubmit)="creaNuovoUtente()">
+    <div>
+      <label for="idBanca">ID Banca:</label>
+      <select [(ngModel)]="nuovoUtente.idBanca" name="idBanca" required>
+        <option *ngFor="let bank of banks" [value]="bank.id">{{ bank.nome }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="nomeUtente">Nome Utente:</label>
+      <input [(ngModel)]="nuovoUtente.nomeUtente" name="nomeUtente" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input [(ngModel)]="nuovoUtente.password" name="password" required>
+    </div>
+    <button type="submit" [disabled]="!formValido()">Crea Utente</button>
+  </form>
+</div>
