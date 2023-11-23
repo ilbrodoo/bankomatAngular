@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BankService } from '../bank.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Funzionalita } from '../funzionalita';
 
 @Component({
   selector: 'app-banks',
@@ -10,15 +11,17 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class BanksComponent {
   banks: any[] = []; // Assicurati di avere un array di banche nel tuo componente
   selectedBank: any; // Variabile per tenere traccia della banca selezionata
-  funzionalita:any[] = [];
+  funzionalita:Funzionalita[] = [];
   constructor(private bankService: BankService ,private router: Router, private route: ActivatedRoute) {}
 
   gestisciUtenti(idBanca: string) {
     // Naviga al componente bank-user e passa l'idBanca come parametro
     this.router.navigate(['bank-user', { idBanca: idBanca }], { relativeTo: this.route });
   }
-  getAllFunzionalita(){
-    this.bankService.getAllFunzionalita().subscribe();
+  getAllFunzionalita() {
+    this.bankService.getAllFunzionalita().subscribe((funzionalita) => {
+      this.funzionalita = funzionalita;
+    });
   }
  
   getAllBanks() {
